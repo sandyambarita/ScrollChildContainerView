@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var parentScrollView: UIScrollView!
     
     
-    var previousOffset: CGFloat = 0
+    var childScrollView: UIScrollView?
+    var goingUp: Bool?
+    var childScrollingDownDueToParent = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,17 +54,33 @@ extension ViewController: UIScrollViewDelegate, ScrollViewContainingDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let parentViewMaxContentYOffset = parentScrollView.contentSize.height - parentScrollView.frame.height
-        print("scrollView.contentOffset.y \(scrollView.contentOffset.y) nav\(navigationView.frame.maxY) max\(parentViewMaxContentYOffset)")
-        if scrollView == parentScrollView {
-            
+        
+        goingUp = scrollView.panGestureRecognizer.translation(in: scrollView).y < 0
+        if goingUp! {
+            if scrollView != parentScrollView {
+                if parentScrollView.contentOffset.y < parentViewMaxContentYOffset && !childScrollingDownDueToParent {
+                    parentScrollView.contentOffset.y = max(min(parentScrollView.contentOffset.y + scrollView.contentOffset.y, parentViewMaxContentYOffset), 0)
+                    scrollView.contentOffset.y = 0
+                }
+                childScrollView = scrollView
+            }
         } else {
-            if scrollView.contentOffset.y > headerView.frame.height {
-                menuView.frame.origin.y = navigationView.frame.minY
+            if scrollView == parentScrollView {
+                if childScrollView?.contentOffset.y ?? 0 > 0 && parentScrollView.contentOffset.y < parentViewMaxContentYOffset {
+                    childScrollingDownDueToParent = true
+                    childScrollView?.contentOffset.y = max(childScrollView!.contentOffset.y - (parentViewMaxContentYOffset - parentScrollView.contentOffset.y), 0)
+                    parentScrollView.contentOffset.y = parentViewMaxContentYOffset
+                    childScrollingDownDueToParent = false
+                }
             } else {
-                headerViewTop.constant = -(scrollView.contentOffset.y)
-                menuView.frame.origin.y = headerView.frame.maxY
+                if scrollView.contentOffset.y < 0 && parentScrollView.contentOffset.y > 0 {
+                    parentScrollView.contentOffset.y = max(parentScrollView.contentOffset.y - abs(scrollView.contentOffset.y), 0)
+                    print("parentScrollView.contentOffset.y\(parentScrollView.contentOffset.y)")
+                }
+                childScrollView = scrollView
             }
         }
+        
         
         
     }

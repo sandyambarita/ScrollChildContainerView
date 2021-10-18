@@ -58,7 +58,6 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TCd-0e-Dwx" secondAttribute="bottom" id="5OE-RN-o44"/>
                                     <constraint firstItem="TCd-0e-Dwx" firstAttribute="width" secondItem="YAe-RF-BNK" secondAttribute="width" id="T0O-od-rEz"/>
-                                    <constraint firstItem="TCd-0e-Dwx" firstAttribute="height" secondItem="YAe-RF-BNK" secondAttribute="height" multiplier="0.944853" id="YMq-87-Qhv"/>
                                     <constraint firstAttribute="trailing" secondItem="TCd-0e-Dwx" secondAttribute="trailing" id="nkO-0v-2yM"/>
                                     <constraint firstItem="TCd-0e-Dwx" firstAttribute="leading" secondItem="YAe-RF-BNK" secondAttribute="leading" id="uKb-SS-uUY"/>
                                     <constraint firstItem="TCd-0e-Dwx" firstAttribute="top" secondItem="YAe-RF-BNK" secondAttribute="top" id="vxe-yl-2DG"/>
@@ -82,6 +81,7 @@
                             <constraint firstItem="YAe-RF-BNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TyR-80-qxI"/>
                             <constraint firstItem="YAe-RF-BNK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eAB-o1-bmY"/>
                             <constraint firstAttribute="bottom" secondItem="YAe-RF-BNK" secondAttribute="bottom" id="pqD-f3-WCA"/>
+                            <constraint firstItem="AcT-qa-xye" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.469866" id="wPo-yc-GVL"/>
                         </constraints>
                     </view>
                     <connections>
