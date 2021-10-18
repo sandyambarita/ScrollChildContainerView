@@ -15,6 +15,8 @@
 		A61840C6271D5619008FA74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61840C4271D5619008FA74E /* LaunchScreen.storyboard */; };
 		A61840D1271D5619008FA74E /* ScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61840D0271D5619008FA74E /* ScrollTests.swift */; };
 		A61840DC271D5619008FA74E /* ScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61840DB271D5619008FA74E /* ScrollUITests.swift */; };
+		A61840EA271D574F008FA74E /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61840E9271D574F008FA74E /* ChildViewController.swift */; };
+		A61840EC271D5831008FA74E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61840EB271D5831008FA74E /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A61840D7271D5619008FA74E /* ScrollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61840DB271D5619008FA74E /* ScrollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollUITests.swift; sourceTree = "<group>"; };
 		A61840DD271D5619008FA74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A61840E9271D574F008FA74E /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		A61840EB271D5831008FA74E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				A61840C2271D5619008FA74E /* Assets.xcassets */,
 				A61840C4271D5619008FA74E /* LaunchScreen.storyboard */,
 				A61840C7271D5619008FA74E /* Info.plist */,
+				A61840E9271D574F008FA74E /* ChildViewController.swift */,
+				A61840EB271D5831008FA74E /* PageViewController.swift */,
 			);
 			path = Scroll;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				A61840BE271D5616008FA74E /* ViewController.swift in Sources */,
 				A61840BA271D5616008FA74E /* AppDelegate.swift in Sources */,
 				A61840BC271D5616008FA74E /* SceneDelegate.swift in Sources */,
+				A61840EC271D5831008FA74E /* PageViewController.swift in Sources */,
+				A61840EA271D574F008FA74E /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
